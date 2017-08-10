@@ -1,5 +1,12 @@
+import * as ActionTypes from '../constants/ActionTypes'
+
 const initialState = []
 
 export default function films(state = initialState, action) {
-    return state
+    switch (action.type) {
+        case ActionTypes.UPDATE_FILMS:
+            return action.value
+        default:
+            return state
+    }
 }

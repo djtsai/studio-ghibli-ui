@@ -1,0 +1,1 @@
+export const UPDATE_FILMS = 'UPDATE_FILMS'
