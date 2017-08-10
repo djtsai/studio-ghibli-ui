@@ -2,7 +2,8 @@ import React from 'react'
 import Grid from 'react-bootstrap/lib/Grid'
 import { Switch, Route } from 'react-router-dom'
 import Root from './Root'
-import UndefinedRoute from './UndefinedRoute'
+import Films from './Films'
+import UndefinedRoute from '../components/UndefinedRoute'
 
 class GhibliApp extends React.Component {
     render() {
@@ -10,7 +11,8 @@ class GhibliApp extends React.Component {
             <Grid className="ghibli-container" fluid={true}>
                 <Switch>
                     <Route exact path="/" component={Root}/>
-                    <Route path="/" render={props => <UndefinedRoute {...props}/>}/>
+                    <Route path="/films" component={Films}/>
+                    <Route path="/" component={UndefinedRoute}/>
                 </Switch>
             </Grid>
         )

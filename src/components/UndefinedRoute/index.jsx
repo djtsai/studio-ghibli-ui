@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 class UndefinedRoute extends React.Component {
     componentWillMount() {
-        this.props.history.push('/')
+        this.props.history.push(this.props.redirectTo)
     }
 
     render() {
