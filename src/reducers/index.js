@@ -7,6 +7,8 @@ import location from './location'
 import locations from './locations'
 import species from './species'
 import speciesList from './speciesList'
+import vehicle from './vehicle'
+import vehicles from './vehicles'
 
 const rootReducer = combineReducers({
     film,
@@ -16,7 +18,9 @@ const rootReducer = combineReducers({
     location,
     locations,
     species,
-    speciesList
+    speciesList,
+    vehicle,
+    vehicles
 })
 
 export default rootReducer

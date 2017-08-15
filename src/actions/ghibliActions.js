@@ -120,3 +120,33 @@ export function getSpecies(id) {
 export function clearSpecies() {
     return { type: ActionTypes.CLEAR_SPECIES }
 }
+
+export function getVehicles() {
+    return dispatch => {
+        API.getVehicles().then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_VEHICLES, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function getVehicle(id) {
+    return dispatch => {
+        API.getVehicle(id).then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_VEHICLE, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function clearVehicle() {
+    return { type: ActionTypes.CLEAR_VEHICLE }
+}

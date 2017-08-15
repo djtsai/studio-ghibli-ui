@@ -33,3 +33,11 @@ export function getSpeciesList() {
 export function getSpecies(id) {
     return request.get(`${API_URL}/species/${id}`)
 }
+
+export function getVehicles() {
+    return request.get(`${API_URL}/vehicles`)
+}
+
+export function getVehicle(id) {
+    return request.get(`${API_URL}/vehicle/${id}`)
+}
