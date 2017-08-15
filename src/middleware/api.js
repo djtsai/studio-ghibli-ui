@@ -25,3 +25,11 @@ export function getLocations() {
 export function getLocation(id) {
     return request.get(`${API_URL}/locations/${id}`)
 }
+
+export function getSpeciesList() {
+    return request.get(`${API_URL}/species`)
+}
+
+export function getSpecies(id) {
+    return request.get(`${API_URL}/species/${id}`)
+}

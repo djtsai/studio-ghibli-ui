@@ -90,3 +90,33 @@ export function getLocation(id) {
 export function clearLocation() {
     return { type: ActionTypes.CLEAR_LOCATION }
 }
+
+export function getSpeciesList() {
+    return dispatch => {
+        API.getSpeciesList().then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_SPECIES_LIST, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function getSpecies(id) {
+    return dispatch => {
+        API.getSpecies(id).then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_SPECIES, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function clearSpecies() {
+    return { type: ActionTypes.CLEAR_SPECIES }
+}

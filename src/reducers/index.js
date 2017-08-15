@@ -5,6 +5,8 @@ import person from './person'
 import people from './people'
 import location from './location'
 import locations from './locations'
+import species from './species'
+import speciesList from './speciesList'
 
 const rootReducer = combineReducers({
     film,
@@ -12,7 +14,9 @@ const rootReducer = combineReducers({
     person,
     people,
     location,
-    locations
+    locations,
+    species,
+    speciesList
 })
 
 export default rootReducer
