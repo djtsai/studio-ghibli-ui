@@ -23,7 +23,9 @@ class Root extends React.Component {
                     <Link to="/species">
                         <Button bsStyle="primary" block>View Species</Button>
                     </Link>
-                    <Button bsStyle="primary" block>View Vehicles</Button>
+                    <Link to="/vehicles">
+                        <Button bsStyle="primary" block>View Vehicles</Button>
+                    </Link>
                 </Col>
             </Row>
         )

@@ -8,7 +8,7 @@ function getInitialState() {
         vehicle_class: '',
         length: '',
         pilot: '',
-        films: []
+        films: ''
     }
 }
 

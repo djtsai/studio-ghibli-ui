@@ -39,5 +39,5 @@ export function getVehicles() {
 }
 
 export function getVehicle(id) {
-    return request.get(`${API_URL}/vehicle/${id}`)
+    return request.get(`${API_URL}/vehicles/${id}`)
 }

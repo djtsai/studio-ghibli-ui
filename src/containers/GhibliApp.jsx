@@ -6,6 +6,7 @@ import Films from './Films'
 import People from './People'
 import Locations from './Locations'
 import Species from './Species'
+import Vehicles from './Vehicles'
 import UndefinedRoute from '../components/UndefinedRoute'
 
 class GhibliApp extends React.Component {
@@ -18,6 +19,7 @@ class GhibliApp extends React.Component {
                     <Route path="/people" component={People}/>
                     <Route path="/locations" component={Locations}/>
                     <Route path="/species" component={Species}/>
+                    <Route path="/vehicles" component={Vehicles}/>
                     <Route path="/" component={UndefinedRoute}/>
                 </Switch>
             </Grid>
