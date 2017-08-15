@@ -5,6 +5,7 @@ import Root from './Root'
 import Films from './Films'
 import People from './People'
 import Locations from './Locations'
+import Species from './Species'
 import UndefinedRoute from '../components/UndefinedRoute'
 
 class GhibliApp extends React.Component {
@@ -16,6 +17,7 @@ class GhibliApp extends React.Component {
                     <Route path="/films" component={Films}/>
                     <Route path="/people" component={People}/>
                     <Route path="/locations" component={Locations}/>
+                    <Route path="/species" component={Species}/>
                     <Route path="/" component={UndefinedRoute}/>
                 </Switch>
             </Grid>

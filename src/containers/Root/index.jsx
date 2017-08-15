@@ -20,7 +20,9 @@ class Root extends React.Component {
                     <Link to="/locations">
                         <Button bsStyle="primary" block>View Locations</Button>
                     </Link>
-                    <Button bsStyle="primary" block>View Species</Button>
+                    <Link to="/species">
+                        <Button bsStyle="primary" block>View Species</Button>
+                    </Link>
                     <Button bsStyle="primary" block>View Vehicles</Button>
                 </Col>
             </Row>

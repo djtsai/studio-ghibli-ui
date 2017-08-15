@@ -18,7 +18,7 @@ class DescriptionItem extends React.Component {
         return this.props.domainLink === '' ? value : <Link to={`/${this.props.domainLink}/${id}`}>{id}</Link>
     }
 
-    renderValue(value) {
+    renderValue() {
         return this.props.value.constructor === Array
             ? (
                 this.props.value.map((value, index) => (
