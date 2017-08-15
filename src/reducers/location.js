@@ -3,22 +3,22 @@ import * as ActionTypes from '../constants/ActionTypes'
 function getInitialState() {
     return {
         id: '',
-        title: '',
-        description: '',
-        director: '',
-        producer: '',
-        release_date: '',
-        rt_score: ''
+        name: '',
+        climate: '',
+        terrain: '',
+        surface_water: '',
+        residents: [],
+        films: []
     }
 }
 
 const initialState = getInitialState()
 
-export default function film(state = initialState, action) {
+export default function location(state = initialState, action) {
     switch (action.type) {
-        case ActionTypes.UPDATE_FILM:
+        case ActionTypes.UPDATE_LOCATION:
             return action.value
-        case ActionTypes.CLEAR_FILM:
+        case ActionTypes.CLEAR_LOCATION:
             return getInitialState()
         default:
             return state

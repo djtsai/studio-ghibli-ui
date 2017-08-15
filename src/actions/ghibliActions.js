@@ -60,3 +60,33 @@ export function getPerson(id) {
 export function clearPerson() {
     return { type: ActionTypes.CLEAR_PERSON }
 }
+
+export function getLocations() {
+    return dispatch => {
+        API.getLocations().then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_LOCATIONS, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function getLocation(id) {
+    return dispatch => {
+        API.getLocation(id).then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_LOCATION, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function clearLocation() {
+    return { type: ActionTypes.CLEAR_LOCATION }
+}

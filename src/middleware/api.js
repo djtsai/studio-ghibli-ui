@@ -17,3 +17,11 @@ export function getPeople() {
 export function getPerson(id) {
     return request.get(`${API_URL}/people/${id}`)
 }
+
+export function getLocations() {
+    return request.get(`${API_URL}/locations`)
+}
+
+export function getLocation(id) {
+    return request.get(`${API_URL}/locations/${id}`)
+}
