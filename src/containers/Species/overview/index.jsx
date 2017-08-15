@@ -56,20 +56,6 @@ class SpeciesOverview extends React.Component {
                     >
                         Hair Colors
                     </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="people"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Residents
-                    </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="films"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Films
-                    </TableHeaderColumn>
                 </BootstrapTable>
                 <Link to="/">
                     <Button bsStyle="warning">Back</Button>

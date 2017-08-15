@@ -56,20 +56,6 @@ class LocationsOverview extends React.Component {
                     >
                         Surface Water
                     </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="residents"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Residents
-                    </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="films"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Films
-                    </TableHeaderColumn>
                 </BootstrapTable>
                 <Link to="/">
                     <Button bsStyle="warning">Back</Button>

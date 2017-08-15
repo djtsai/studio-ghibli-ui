@@ -45,20 +45,6 @@ class PeopleOverview extends React.Component {
                     <TableHeaderColumn dataField="age" dataSort={true}>Age</TableHeaderColumn>
                     <TableHeaderColumn dataField="eye_color" dataSort={true}>Eye Color</TableHeaderColumn>
                     <TableHeaderColumn dataField="hair_color" dataSort={true}>Hair Color</TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="films"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Films
-                    </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="species"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Species
-                    </TableHeaderColumn>
                 </BootstrapTable>
                 <Link to="/">
                     <Button bsStyle="warning">Back</Button>

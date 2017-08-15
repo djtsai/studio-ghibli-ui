@@ -61,20 +61,6 @@ class VehiclesOverview extends React.Component {
                     >
                         Length
                     </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="pilot"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Pilot
-                    </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="films"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Films
-                    </TableHeaderColumn>
                 </BootstrapTable>
                 <Link to="/">
                     <Button bsStyle="warning">Back</Button>
