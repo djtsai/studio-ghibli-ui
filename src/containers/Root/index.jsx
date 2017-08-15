@@ -14,7 +14,9 @@ class Root extends React.Component {
                     <Link to="/films">
                         <Button bsStyle="primary" block>View Films</Button>
                     </Link>
-                    <Button bsStyle="primary" block>View People</Button>
+                    <Link to="/people">
+                        <Button bsStyle="primary" block>View People</Button>
+                    </Link>
                     <Button bsStyle="primary" block>View Locations</Button>
                     <Button bsStyle="primary" block>View Species</Button>
                     <Button bsStyle="primary" block>View Vehicles</Button>

@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/lib/Button'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 import * as GhibliActions from '../../../actions/ghibliActions'
 
@@ -65,6 +67,9 @@ class FilmsOverview extends React.Component {
                         RT Score
                     </TableHeaderColumn>
                 </BootstrapTable>
+                <Link to="/">
+                    <Button bsStyle="warning">Back</Button>
+                </Link>
             </div>
         )
     }

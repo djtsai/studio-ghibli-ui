@@ -29,14 +29,14 @@ class FilmDetails extends React.Component {
 
     render() {
         return (
-            <Panel bsStyle="success" header={<h4>{this.props.film.title}</h4>}>
+            <Panel bsStyle="primary" header={<h4>{this.props.film.title}</h4>}>
                 <DescriptionItem title="Description" value={this.props.film.description}/>
                 <DescriptionItem title="Director" value={this.props.film.director}/>
                 <DescriptionItem title="Producer" value={this.props.film.producer}/>
                 <DescriptionItem title="Release Date" value={this.props.film.release_date}/>
                 <DescriptionItem title="Rotten Tomatoes Score" value={this.props.film.rt_score}/>
                 <Link to="/films">
-                    <Button bsStyle="warning">Back</Button>
+                    <Button bsStyle="warning">Back to Films</Button>
                 </Link>
             </Panel>
         )

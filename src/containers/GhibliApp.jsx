@@ -3,6 +3,7 @@ import Grid from 'react-bootstrap/lib/Grid'
 import { Switch, Route } from 'react-router-dom'
 import Root from './Root'
 import Films from './Films'
+import People from './People'
 import UndefinedRoute from '../components/UndefinedRoute'
 
 class GhibliApp extends React.Component {
@@ -12,6 +13,7 @@ class GhibliApp extends React.Component {
                 <Switch>
                     <Route exact path="/" component={Root}/>
                     <Route path="/films" component={Films}/>
+                    <Route path="/people" component={People}/>
                     <Route path="/" component={UndefinedRoute}/>
                 </Switch>
             </Grid>
