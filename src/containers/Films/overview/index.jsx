@@ -50,7 +50,20 @@ class FilmsOverview extends React.Component {
                     <TableHeaderColumn dataField="release_date" width="128px" dataSort={true}>
                         Release Date
                     </TableHeaderColumn>
-                    <TableHeaderColumn dataField="rt_score" width="100px" dataSort={true}>RT Score</TableHeaderColumn>
+                    <TableHeaderColumn
+                        dataField="rt_score"
+                        width="100px"
+                        dataSort={true}
+                        sortFunc={(a, b, order) => {
+                            if (order === 'asc') {
+                                return parseInt(a.rt_score) - parseInt(b.rt_score)
+                            } else {
+                                return parseInt(b.rt_score) - parseInt(a.rt_score)
+                            }
+                        }}
+                    >
+                        RT Score
+                    </TableHeaderColumn>
                 </BootstrapTable>
             </div>
         )

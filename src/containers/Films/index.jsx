@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/lib/Col'
 import PageHeader from 'react-bootstrap/lib/PageHeader'
 import { Switch, Route } from 'react-router-dom'
 import FilmsOverview from './overview'
-import UndefinedRoute from '../../components/UndefinedRoute'
+import FilmDetails from './details'
 
 class Films extends React.Component {
     render() {
@@ -14,7 +14,7 @@ class Films extends React.Component {
                     <PageHeader>Films</PageHeader>
                     <Switch>
                         <Route exact path="/films" component={FilmsOverview}/>
-                        <Route path="/films" render={props => <UndefinedRoute {...props} redirectTo="/films"/>}/>
+                        <Route path="/films/:id" component={FilmDetails}/>
                     </Switch>
                 </Col>
             </Row>
