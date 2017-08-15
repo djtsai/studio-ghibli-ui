@@ -7,12 +7,14 @@ import People from './People'
 import Locations from './Locations'
 import Species from './Species'
 import Vehicles from './Vehicles'
+import TopNavbar from '../components/TopNavbar'
 import UndefinedRoute from '../components/UndefinedRoute'
 
 class GhibliApp extends React.Component {
     render() {
         return (
             <Grid className="ghibli-container" fluid={true}>
+                <TopNavbar/>
                 <Switch>
                     <Route exact path="/" component={Root}/>
                     <Route path="/films" component={Films}/>
