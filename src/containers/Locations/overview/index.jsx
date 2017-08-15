@@ -9,7 +9,7 @@ import * as GhibliActions from '../../../actions/ghibliActions'
 
 function mapStateToProps(state) {
     return {
-        people: state.people
+        locations: state.locations
     }
 }
 
@@ -17,17 +17,17 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators(GhibliActions, dispatch)
 }
 
-class PeopleOverview extends React.Component {
+class LocationsOverview extends React.Component {
     componentWillMount() {
-        this.props.getPeople()
+        this.props.getLocations()
     }
 
     render() {
         return (
-            <div className="people-overview-container">
-                <h4>Click row to view person details</h4>
+            <div className="locations-overview-container">
+                <h4>Click row to view location details</h4>
                 <BootstrapTable
-                    data={this.props.people}
+                    data={this.props.locations}
                     height="auto"
                     striped={true}
                     pagination={true}
@@ -36,28 +36,39 @@ class PeopleOverview extends React.Component {
                         mode: 'radio',
                         hideSelectColumn: true,
                         clickToSelect: true,
-                        onSelect: row => this.props.history.push(`/people/${row.id}`)
+                        onSelect: row => this.props.history.push(`/locations/${row.id}`)
                     }}
                 >
                     <TableHeaderColumn dataField="id" isKey={true}>ID</TableHeaderColumn>
                     <TableHeaderColumn dataField="name" dataSort={true}>Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField="gender" dataSort={true}>Description</TableHeaderColumn>
-                    <TableHeaderColumn dataField="age" dataSort={true}>Age</TableHeaderColumn>
-                    <TableHeaderColumn dataField="eye_color" dataSort={true}>Eye Color</TableHeaderColumn>
-                    <TableHeaderColumn dataField="hair_color" dataSort={true}>Hair Color</TableHeaderColumn>
+                    <TableHeaderColumn dataField="climate" dataSort={true}>Climate</TableHeaderColumn>
+                    <TableHeaderColumn dataField="terrain" dataSort={true}>Terrain</TableHeaderColumn>
+                    <TableHeaderColumn
+                        dataField="surface_water"
+                        dataSort={true}
+                        sortFunc={(a, b, order) => {
+                            if (order === 'asc') {
+                                return parseInt(a.surface_water) - parseInt(b.surface_water)
+                            } else {
+                                return parseInt(b.surface_water) - parseInt(a.surface_water)
+                            }
+                        }}
+                    >
+                        Surface Water
+                    </TableHeaderColumn>
+                    <TableHeaderColumn
+                        dataField="residents"
+                        dataSort={true}
+                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
+                    >
+                        Residents
+                    </TableHeaderColumn>
                     <TableHeaderColumn
                         dataField="films"
                         dataSort={true}
                         tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
                     >
                         Films
-                    </TableHeaderColumn>
-                    <TableHeaderColumn
-                        dataField="species"
-                        dataSort={true}
-                        tdStyle={{ overflow: "scroll", textOverflow: "initial" }}
-                    >
-                        Species
                     </TableHeaderColumn>
                 </BootstrapTable>
                 <Link to="/">
@@ -68,10 +79,10 @@ class PeopleOverview extends React.Component {
     }
 }
 
-PeopleOverview.propTypes = {
-    people: PropTypes.array.isRequired,
-    getPeople: PropTypes.func.isRequired,
+LocationsOverview.propTypes = {
+    locations: PropTypes.array.isRequired,
+    getLocations: PropTypes.func.isRequired,
     history: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PeopleOverview)
+export default connect(mapStateToProps, mapDispatchToProps)(LocationsOverview)
