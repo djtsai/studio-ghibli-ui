@@ -9,3 +9,11 @@ export function getFilms() {
 export function getFilm(id) {
     return request.get(`${API_URL}/films/${id}`)
 }
+
+export function getPeople() {
+    return request.get(`${API_URL}/people`)
+}
+
+export function getPerson(id) {
+    return request.get(`${API_URL}/people/${id}`)
+}

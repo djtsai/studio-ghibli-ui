@@ -30,3 +30,33 @@ export function getFilm(id) {
 export function clearFilm() {
     return { type: ActionTypes.CLEAR_FILM }
 }
+
+export function getPeople() {
+    return dispatch => {
+        API.getPeople().then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_PEOPLE, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function getPerson(id) {
+    return dispatch => {
+        API.getPerson(id).then(
+            response => {
+                dispatch({ type: ActionTypes.UPDATE_PERSON, value: response.body })
+            },
+            error => {
+                // I would normally do error handling, but I will assume the API will always return success for this project.
+            }
+        )
+    }
+}
+
+export function clearPerson() {
+    return { type: ActionTypes.CLEAR_PERSON }
+}
